@@ -1,0 +1,14 @@
+:host {
+  header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width:  100%;
+    background-color: var(--background-second);
+  }
+  p {
+    font-size: 26px;
+    color: var(--primary);
+    font-family: var(--sub-title);
+  }
+}

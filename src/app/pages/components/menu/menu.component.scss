@@ -1,0 +1,28 @@
+:host {
+  .sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 200px;
+    background-color: #333;
+    color: #fff;
+    padding-top: 20px;
+  }
+
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .sidebar ul li {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .sidebar ul li:hover {
+    background-color: #555;
+    cursor: pointer;
+  }
+
+}
