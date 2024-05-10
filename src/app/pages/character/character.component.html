@@ -1,2 +1,12 @@
 <app-header/>
+@for (character of characters; track character.id) {
+
+  <div class="card">
+    <app-card image="{{character.image}}" title="{{character.name}}" status="{{character.status}}" gender="{{character.gender}}" statusColor="{{character.status}}" location="{{character.location.name}}" epP="{{character.episode[0]}}" epU="{{character.episode[character.episode.length - 1]}}"/>
+
+  </div>
+
+}
+
 <app-menu/>
+

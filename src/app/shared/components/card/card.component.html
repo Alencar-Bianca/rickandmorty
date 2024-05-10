@@ -1,0 +1,14 @@
+<div class="boxes flex">
+  <a [routerLink]="[link]">
+    <div class="box">
+      <div class="img-container"><img src="{{image}}" alt=""></div>
+      <div class="info">
+        <h2 class="sub-title">{{title}}</h2>
+        <span class="text span" [attr.statusColor]="statusColor">{{status}} - {{gender}}</span>
+        <p class="text"><span class="mark">Localização:</span> {{location}}</p>
+        <p class="text"><span class="mark">Primeiro Episódio:</span> {{epP}}</p>
+        <p class="text"><span class="mark">Último Episódio:</span> {{epU}}</p>
+      </div>
+    </div>
+  </a>
+</div>

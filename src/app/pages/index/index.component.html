@@ -1,5 +1,11 @@
 <div class="grid">
   <app-header/>
   <app-menu/>
-  <h1>dsdssd</h1>
+  <main class="content">
+    <img src="../../../assets/rickandmorty.png" alt="">
+    @for (link of getLinks(); track link.id) {
+      <app-card link="{{link.link}}" image="{{link.image}}" title="{{link.title}}"/>
+    }
+
+  </main>
 </div>

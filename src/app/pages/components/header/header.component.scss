@@ -1,9 +1,9 @@
 :host {
   header {
     position: fixed;
-    left: 0;
+    right:  0;
     top: 0;
-    width:  100%;
+    width: calc( 100% - 150px);
     background-color: var(--background-second);
   }
   p {
