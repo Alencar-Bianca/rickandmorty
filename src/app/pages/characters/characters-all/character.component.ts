@@ -1,4 +1,4 @@
-import { Component, HostListener, Inject } from '@angular/core';
+import { Component, HostListener, Inject, OnInit } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 
 import { MenuComponent } from '../../components/menu/menu.component';
@@ -17,7 +17,7 @@ import { charactersInterface } from '../../../interfaces/characters.interface';
   templateUrl: './character.component.html',
   styleUrl: './character.component.scss'
 })
-export class CharacterComponent {
+export class CharacterComponent implements OnInit {
 
   characters: charactersInterface[] = [];
   private page: number = 1;
@@ -25,7 +25,7 @@ export class CharacterComponent {
 
   constructor(private api: ApiService, @Inject(DOCUMENT) private document: Document){}
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.getCharacters(this.page);
   }
 
@@ -37,7 +37,7 @@ export class CharacterComponent {
             this.info = info;
       },
       error: (err) => {console.log(err)}
-    })
+    });
   }
 
   @HostListener('window:scroll', [])
