@@ -11,7 +11,7 @@ export class ApiService {
 
   URL_CHARACTERS: string = "https://rickandmortyapi.com/api/character";
 
-  getCharacters(query = '', page = 200): Observable<any>{
-    return this.httpClient.get(`${this.URL_CHARACTERS}/?name=${query}&page=${2}`).pipe(res=> res);
+  getCharacters(page:number): Observable<any>{
+    return this.httpClient.get(`${this.URL_CHARACTERS}/?page=${page}`).pipe(res=> res);
   }
 }
