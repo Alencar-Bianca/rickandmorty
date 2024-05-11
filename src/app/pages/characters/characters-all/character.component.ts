@@ -21,7 +21,7 @@ export class CharacterComponent implements OnInit {
 
   characters: charactersInterface[] = [];
   private page: number = 1;
-  private info: { next: string, count: number, pages: number, prev: string } = { next: '', count: 0, pages: 0, prev: '' };
+  private info: { next: string} = { next: ''};
 
   constructor(private api: ApiService, @Inject(DOCUMENT) private document: Document){}
 

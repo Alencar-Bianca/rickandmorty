@@ -1,0 +1,8 @@
+<app-header/>
+<app-menu/>
+@for (ep of episodeos; track ep.id) {
+  <div class="card">
+    <app-card-episodes link="episodio/{{ep.id}}" name="{{ep.name}}" airDate="{{ep.air_date}}" episode="{{ep.episode}}"/>
+  </div>
+
+}

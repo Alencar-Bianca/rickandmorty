@@ -24,7 +24,7 @@ export class ApiService {
   }
 
   getEpisode(id: number): Observable<any>{
-    return this.httpClient.get(`${this.URL_CHARACTERS}/${id}`).pipe(res=> res);
+    return this.httpClient.get(`${this.URL_EPISODE}/${id}`).pipe(res=> res);
   }
 
 }
