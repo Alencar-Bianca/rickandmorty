@@ -4,13 +4,17 @@
     right:  0;
     top: 0;
     width: calc( 100% - 150px);
-    background-color: var(--background-second);
+    background-color: var(--second);
   }
   p {
     font-size: 26px;
     color: var(--primary);
     font-family: var(--sub-title);
   }
+  a {
+    width: 50px;
+  }
+
   @media (max-width: 830px)  {
     header{
       width: 100% ;
