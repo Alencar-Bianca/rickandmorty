@@ -1,9 +1,9 @@
 <app-header/>
-
-
-  <div class="card">
-    <app-card image="{{char.image}}" title="{{char.name}}" status="{{char.status}}" gender="{{char.gender}}" statusColor="{{char.status}}" location="{{char.location.name}}" epP="{{char.episode[0]}}" epU="{{char.episode[char.episode.length - 1]}}" />
+<app-menu/>
+<div class="card card-img"><a href="/personagens"><img class="img-back" title="Voltar" src="../../../../assets/back.png" alt="Voltar"></a></div>
+  <div class="card content-geral">
+    <app-card link="personagens" image="{{char.image}}" title="{{char.name}}" status="{{char.status}}" gender="{{char.gender}}" statusColor="{{char.status}}" location="{{char.location.name}}" epP="{{char.episode[0]}}" epU="{{char.episode[char.episode.length - 1]}}" />
   </div>
 
-<app-menu/>
+
 

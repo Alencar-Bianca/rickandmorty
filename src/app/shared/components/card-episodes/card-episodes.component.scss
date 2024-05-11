@@ -4,47 +4,9 @@
     justify-content: center;
   }
 
-  a {
-    width: 100%;
-    max-width: 650px;
-
-    .box {
-      background-color: var(--background-fourth);
-      height: 100%;
-      border-radius: 9px;
-      margin-top: 20px ;
-      text-align: center  ;
-      .sub-title {
-        font-size: 36px;
-        margin: 10px 0 ;
-      }
-    }
-
-    .box:hover {
-      background-color: var(--background-third);
-    }
+  .box {
+    display: block;
+    text-align: center ;
   }
-
-  .info {
-    padding: 20px;
-
-    h2, .span  {
-      text-align: center;
-    }
-
-    p, span {
-      display: block;
-      font-size: 15px;
-      margin-bottom: 12px;
-    }
-
-    .mark {
-      color: #507f9a;
-      font-weight: bold;
-    }
-
-  }
-
-
 
 }

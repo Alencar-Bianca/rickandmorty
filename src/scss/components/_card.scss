@@ -1,0 +1,88 @@
+.flex {
+  justify-content: center;
+}
+
+a {
+  width: 100%;
+  max-width: 650px;
+
+  .box {
+    display: flex;
+    background-color: var(--background-fourth);
+    height: 100%;
+    border-radius: 9px;
+    margin-top: 20px ;
+    .sub-title {
+      font-size: 36px;
+      margin: 10px 0 ;
+    }
+  }
+
+  .box:hover {
+    background-color: var(--background-third);
+  }
+}
+
+.info {
+  padding: 20px;
+
+  h2, .span  {
+    text-align: center;
+  }
+
+  p, span {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+
+  .mark {
+    color: #507f9a;
+    font-weight: bold;
+  }
+
+  span[statusColor="Alive"]::before,
+  span[statusColor="Dead"]::before,
+  span[statusColor="unknown"]::before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    margin-right: 5px;
+  }
+
+  span[statusColor="Alive"]::before {
+    background-color: green;
+  }
+  span[statusColor="Dead"]::before {
+    background-color: red;
+  }
+  span[statusColor="unknown"]::before {
+    background-color: gray;
+  }
+}
+
+
+@media (max-width: 670px)  {
+  .box  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  a {
+    width: 100%;
+    max-width: 340px;
+  }
+}
+
+@media (max-width: 360px)  {
+  a {
+    overflow: hidden;
+  }
+}
+
+
+
+

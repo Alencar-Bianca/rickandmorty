@@ -11,4 +11,11 @@
     color: var(--primary);
     font-family: var(--sub-title);
   }
+  @media (max-width: 830px)  {
+    header{
+      width: 100% ;
+
+    }
+
+  }
 }

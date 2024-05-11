@@ -5,8 +5,6 @@ import { CardComponent } from '../../../shared/components/card/card.component';
 import { MenuComponent } from '../../components/menu/menu.component';
 import { HeaderComponent } from '../../components/header/header.component';
 
-import { charactersInterface } from '../../../interfaces/characters.interface';
-
 import { ApiService } from '../../../services/api.service';
 
 @Component({

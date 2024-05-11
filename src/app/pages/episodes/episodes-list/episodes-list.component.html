@@ -1,7 +1,8 @@
 <app-header/>
 <app-menu/>
+<div class="card card-img"><a href="/"><img class="img-back" title="Voltar" src="../../../../assets/back.png" alt="Voltar"></a></div>
 @for (ep of episodeos; track ep.id) {
-  <div class="card">
+  <div class="card content-geral">
     <app-card-episodes link="episodio/{{ep.id}}" name="{{ep.name}}" airDate="{{ep.air_date}}" episode="{{ep.episode}}"/>
   </div>
 

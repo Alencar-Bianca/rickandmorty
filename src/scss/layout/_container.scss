@@ -26,3 +26,51 @@
 .card:first-of-type {
   padding-top: 70px;
 }
+.img-back {
+  position: fixed  ;
+  right:  20px;
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.container {
+  p {
+    margin-right: 10px
+  }
+}
+
+@media (max-width: 1000px)  {
+  .content-geral {
+    margin-left: 150px;
+  }
+  .img-back{
+    right:  0;
+
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 830px)  {
+  header{
+    position: fixed;
+    right:  0;
+    top: 0;
+    width: 100% ;
+    background-color: red;
+  }
+  .content-geral {
+    margin-left: initial;
+  }
+  .sidebar {
+    display: none;
+  }
+}
+
+@media (max-width: 670px)  {
+  .img-main  {
+    width: 100%;
+  }
+
+}

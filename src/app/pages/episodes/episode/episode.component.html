@@ -1,7 +1,7 @@
 <app-header/>
 <app-menu/>
-
-  <div class="card">
-    <app-card-episodes name="{{ep.name}}" airDate="{{ep.air_date}}" episode="{{ep.episode}}"/>
+<div class="card card-img"><a href="/episodios"><img class="img-back" title="Voltar" src="../../../../assets/back.png" alt="Voltar"></a></div>
+  <div class="card content-geral">
+    <app-card-episodes link="episodios" name="{{ep.name}}" airDate="{{ep.air_date}}" episode="{{ep.episode}}"/>
   </div>
 

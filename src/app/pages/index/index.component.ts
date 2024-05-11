@@ -3,13 +3,14 @@ import { RouterLink } from '@angular/router';
 
 import { HeaderComponent } from '../components/header/header.component';
 import { MenuComponent } from '../components/menu/menu.component';
-import { CardComponent } from '../../shared/components/card/card.component';
+import { CardIndexComponent } from '../../shared/components/card-index/card-index.component';
+
 import { linksInterface } from '../../interfaces/links.interface';
 
 @Component({
   selector: 'app-index',
   standalone: true,
-  imports: [HeaderComponent, MenuComponent, RouterLink, CardComponent],
+  imports: [HeaderComponent, MenuComponent, RouterLink, CardIndexComponent],
   templateUrl: './index.component.html',
   styleUrl: './index.component.scss'
 })
@@ -23,7 +24,7 @@ export class IndexComponent {
     },
     {
       id: 2,
-      link: 'personagens',
+      link: 'episodios',
       image: '../../../assets/rick-and-morty2.png',
       title: 'Episódio'
     }
