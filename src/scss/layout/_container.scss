@@ -40,6 +40,11 @@
   }
 }
 
+.active {
+  color: #008000 !important;
+  font-weight: bold;
+}
+
 @media (max-width: 1000px)  {
   .content-geral {
     margin-left: 150px;

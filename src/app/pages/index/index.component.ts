@@ -20,13 +20,13 @@ export class IndexComponent {
       id: 1,
       link: 'personagens',
       image: '../../../assets/rick-and-morty1.png',
-      title: 'Personagem'
+      title: 'Personagens'
     },
     {
       id: 2,
       link: 'episodios',
       image: '../../../assets/rick-and-morty2.png',
-      title: 'Episódio'
+      title: 'Episódios'
     }
   ])
 

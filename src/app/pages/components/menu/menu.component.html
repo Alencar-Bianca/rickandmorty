@@ -1,8 +1,8 @@
 <aside class="sidebar">
   <ul>
-    <a class="text" href="/"><li>Home</li></a>
-    <a class="text" href="/personagens"><li>Personagem</li></a>
-    <a class="text" href="/episodios"><li>Episódio</li></a>
+    <a class="text" routerLinkActive="active" [routerLink]="['/']" [routerLinkActiveOptions]="{ exact: true }"><li>Home</li></a>
+    <a class="text" routerLinkActive="active" [routerLink]="['/personagens']"><li>Personagens</li></a>
+    <a class="text" routerLinkActive="active" [routerLink]="['/episodios']"><li>Episódios</li></a>
   </ul>
 </aside>
 
