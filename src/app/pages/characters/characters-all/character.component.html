@@ -1,7 +1,7 @@
 <app-header/>
 <app-menu/>
 <div class="card card-img"><a href="/"><img class="img-back" title="Voltar" src="../../../../assets/back.png" alt="Voltar"></a></div>
-<div class="content-input"><app-search/></div>
+<div class="content-input"><app-search  (searchEvent)="onSearch($event)"/></div>
 @for (character of characters; track character.id) {
   <div class="card content-geral" >
     <app-card link="personagem/{{character.id}}" image="{{character.image}}" title="{{character.name}}" status="{{character.status}}" gender="{{character.gender}}" statusColor="{{character.status}}" location="{{character.location.name}}" epP="{{character.episode[0]}}" epU="{{character.episode[character.episode.length - 1]}}"/>

@@ -21,25 +21,43 @@ import { SearchComponent } from '../../../shared/components/search/search.compon
 export class CharacterComponent implements OnInit {
 
   characters: charactersInterface[] = [];
+  name: string = "";
   private page: number = 1;
   private info: { next: string} = { next: ''};
 
   constructor(private api: ApiService, @Inject(DOCUMENT) private document: Document){}
 
   ngOnInit() {
-    this.getCharacters(this.page);
+    this.onSearch(this.name);
   }
 
-  getCharacters(page: number) {
-    this.api.getCharacters(page).subscribe({
-      next: (res) => {
-        const { info, results } = res;
-            this.characters = [...this.characters, ...results];
-            this.info = info;
-      },
-      error: (err) => {console.log(err)}
-    });
+  filter(page: number, name: string | null): void {
+  this.api.filterChar(page, name).subscribe({
+    next: (res) => {
+      const { info, results } = res;
+      if (page === 1) {
+        this.characters = [...results];
+      } else {
+        this.characters.push(...results);
+      }
+      this.info = info;
+    },
+    error: (err) => {
+      console.log(err);
+    }
+  });
+}
+
+
+onSearch(value: string) {
+  this.name = value;
+  if (value && value.length > 2) {
+    this.filter(this.page, value);
+  } else {
+    this.page = 1;
+    this.filter(this.page, '');
   }
+}
 
   @HostListener('window:scroll', [])
   onWindowScroll(): void {
@@ -55,7 +73,7 @@ export class CharacterComponent implements OnInit {
 
   nextPage(): void {
     this.page++;
-    this.getCharacters(this.page);
+    this.filter(this.page, this.name);
   }
 
 }
