@@ -31,7 +31,7 @@ export class CharacterComponent implements OnInit {
     this.onSearch(this.name);
   }
 
-  filter(page: number, name: string | null): void {
+  filter(page: number, name: string ): void {
   this.api.filterChar(page, name).subscribe({
     next: (res) => {
       const { info, results } = res;
@@ -51,7 +51,7 @@ export class CharacterComponent implements OnInit {
 
 onSearch(value: string) {
   this.name = value;
-  if (value && value.length > 2) {
+  if (value && value.length > 1) {
     this.filter(this.page, value);
   } else {
     this.page = 1;

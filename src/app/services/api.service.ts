@@ -11,8 +11,11 @@ export class ApiService {
   URL_CHARACTERS: string = "https://rickandmortyapi.com/api/character";
   URL_EPISODE: string = "https://rickandmortyapi.com/api/episode";
 
-  getCharacters(page:number): Observable<any>{
-    return this.httpClient.get(`${this.URL_CHARACTERS}/?page=${page}`).pipe(res=> res);
+  filterChar(page:number, name: string): Observable<any>{
+    return this.httpClient.get(`${this.URL_CHARACTERS}/?page=${page}&name=${name}`).pipe(res=> res);
+  }
+  filterEp(page:number, name: string): Observable<any>{
+    return this.httpClient.get(`${this.URL_EPISODE}/?page=${page}&episode=${name}`).pipe(res=> res);
   }
 
   getChar(id: number): Observable<any>{
@@ -27,8 +30,6 @@ export class ApiService {
     return this.httpClient.get(`${this.URL_EPISODE}/${id}`).pipe(res=> res);
   }
 
-  filterChar(page:any, name: any): Observable<any>{
-    return this.httpClient.get(`${this.URL_CHARACTERS}/?page=${page}&name=${name}`).pipe(res=> res);
-  }
+
 
 }

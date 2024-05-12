@@ -22,9 +22,9 @@ export class EpisodesListComponent implements OnInit {
   private info: { next: string} = { next: ''};
   private page: number = 1;
   constructor(private api: ApiService, @Inject(DOCUMENT) private document: Document ){}
-
+  name: string = "";
   ngOnInit() {
-    this.getEpisodeos(this.page)
+    this.onSearch(this.name);
   }
 
   getEpisodeos(page: number){
@@ -37,6 +37,36 @@ export class EpisodesListComponent implements OnInit {
       }
 
     });
+  }
+
+  filter(page: number, name: string ): void {
+    this.api.filterEp(page, name).subscribe({
+      next: (res) => {
+        const { info, results } = res;
+        if (page === 1) {
+          this.episodeos = [...results];
+        } else {
+          this.episodeos.push(...results);
+        }
+        this.info = info;
+
+      },
+      error: (err) => {
+        console.log(err);
+      }
+    });
+  }
+
+
+  onSearch(value: string) {
+    this.name = value;
+    console.log(this.name )
+    if (value && value.length > 2) {
+      this.filter(this.page, value);
+    } else {
+      this.page = 1;
+      this.filter(this.page, '');
+    }
   }
 
   @HostListener('window:scroll', [])
@@ -53,7 +83,7 @@ export class EpisodesListComponent implements OnInit {
 
   nextPage(): void {
     this.page++;
-    this.getEpisodeos(this.page);
+    this.filter(this.page, this.name);
   }
 
 }
