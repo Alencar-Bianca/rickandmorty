@@ -15,7 +15,7 @@ export class ApiService {
     return this.httpClient.get(`${this.URL_CHARACTERS}/?page=${page}&name=${name}`).pipe(res=> res);
   }
   filterEp(page:number, name: string): Observable<any>{
-    return this.httpClient.get(`${this.URL_EPISODE}/?page=${page}&episode=${name}`).pipe(res=> res);
+    return this.httpClient.get(`${this.URL_EPISODE}/?page=${page}&name=${name}`).pipe(res=> res);
   }
 
   getChar(id: number): Observable<any>{

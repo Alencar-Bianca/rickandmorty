@@ -60,7 +60,6 @@ export class EpisodesListComponent implements OnInit {
 
   onSearch(value: string) {
     this.name = value;
-    console.log(this.name )
     if (value && value.length > 2) {
       this.filter(this.page, value);
     } else {
