@@ -4,6 +4,7 @@ import { CharacterComponent } from './pages/characters/characters-all/character.
 import { CharComponent } from './pages/characters/char/char.component';
 import { EpisodesListComponent } from './pages/episodes/episodes-list/episodes-list.component';
 import { EpisodeComponent } from './pages/episodes/episode/episode.component';
+import { LoginComponent } from './pages/login/login.component';
 
 
 
@@ -11,6 +12,10 @@ export const routes: Routes = [
   {
     path: '',
     component: IndexComponent,
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
   },
   {
     path: 'personagens',
