@@ -45,6 +45,16 @@
   font-weight: bold;
 }
 
+.content-input {
+  text-align: center;
+  margin: 0 10px;
+  margin-top: 20px;
+}
+.content-input input {
+  width: 100%;
+  max-width: 420px;
+}
+
 @media (max-width: 1000px)  {
   .content-geral {
     margin-left: 150px;
@@ -73,6 +83,12 @@
 @media (max-width: 670px)  {
   .img-main  {
     width: 100%;
+  }
+
+}
+@media (max-width: 570px)  {
+  .content-input {
+    margin-top: 70px;
   }
 
 }

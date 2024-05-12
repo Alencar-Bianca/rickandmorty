@@ -8,12 +8,13 @@ import { CardComponent } from '../../../shared/components/card/card.component';
 import { ApiService } from '../../../services/api.service';
 
 import { charactersInterface } from '../../../interfaces/characters.interface';
+import { SearchComponent } from '../../../shared/components/search/search.component';
 
 
 @Component({
   selector: 'app-character',
   standalone: true,
-  imports: [HeaderComponent, MenuComponent, CardComponent],
+  imports: [HeaderComponent, MenuComponent, CardComponent, SearchComponent],
   templateUrl: './character.component.html',
   styleUrl: './character.component.scss'
 })

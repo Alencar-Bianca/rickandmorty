@@ -1,0 +1,10 @@
+:host {
+  input[type="search"] {
+    background-color: var(--background-fourth);
+    color: var(--text-color);
+    border: 2px solid var(--background-second);
+    padding: 10px;
+    border-radius: 5px;
+    font-family: var(--text);
+  }
+}

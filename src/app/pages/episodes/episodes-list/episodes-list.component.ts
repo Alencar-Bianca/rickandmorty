@@ -8,11 +8,12 @@ import { CardEpisodesComponent } from '../../../shared/components/card-episodes/
 import { EpisodeInterface } from '../../../interfaces/episodios.interface';
 
 import { ApiService } from '../../../services/api.service';
+import { SearchComponent } from '../../../shared/components/search/search.component';
 
 @Component({
   selector: 'app-episodes-list',
   standalone: true,
-  imports: [HeaderComponent, MenuComponent, CardEpisodesComponent],
+  imports: [HeaderComponent, MenuComponent, CardEpisodesComponent, SearchComponent],
   templateUrl: './episodes-list.component.html',
   styleUrl: './episodes-list.component.scss'
 })
