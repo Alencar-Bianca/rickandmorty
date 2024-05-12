@@ -5,6 +5,7 @@ import { CharComponent } from './pages/characters/char/char.component';
 import { EpisodesListComponent } from './pages/episodes/episodes-list/episodes-list.component';
 import { EpisodeComponent } from './pages/episodes/episode/episode.component';
 import { LoginComponent } from './pages/login/login.component';
+import { RegisterComponent } from './pages/register/register.component';
 
 
 
@@ -16,6 +17,10 @@ export const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent,
+  },
+  {
+    path: 'registrar',
+    component: RegisterComponent,
   },
   {
     path: 'personagens',
