@@ -6,6 +6,7 @@ import { EpisodesListComponent } from './pages/episodes/episodes-list/episodes-l
 import { EpisodeComponent } from './pages/episodes/episode/episode.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
+import { PerfilComponent } from './pages/perfil/perfil.component';
 
 
 
@@ -37,5 +38,9 @@ export const routes: Routes = [
   {
     path: 'episodio/:id',
     component: EpisodeComponent,
+  },
+  {
+    path: 'perfil',
+    component: PerfilComponent,
   },
 ];

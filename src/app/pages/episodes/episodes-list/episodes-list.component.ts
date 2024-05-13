@@ -33,7 +33,6 @@ export class EpisodesListComponent implements OnInit {
         const { info, results } = res;
         this.episodeos = [...this.episodeos, ...results];
         this.info = info;
-        console.log(this.episodeos )
       }
 
     });

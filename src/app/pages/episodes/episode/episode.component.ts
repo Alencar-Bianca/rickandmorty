@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+
 import { HeaderComponent } from '../../components/header/header.component';
 import { MenuComponent } from '../../components/menu/menu.component';
 import { CardEpisodesComponent } from '../../../shared/components/card-episodes/card-episodes.component';
-import { EpisodeInterface } from '../../../interfaces/episodios.interface';
+
 import { ApiService } from '../../../services/api.service';
-import { ActivatedRoute } from '@angular/router';
+
 
 @Component({
   selector: 'app-episode',
@@ -28,7 +30,6 @@ export class EpisodeComponent implements OnInit {
     this.api.getEpisode(id).subscribe({
       next: (res) => {
         this.ep = res;
-        console.log(this.ep)
       },
       error: (err) => {console.log(err)}
     })

@@ -8,5 +8,16 @@ import { RouterModule } from '@angular/router';
   styleUrl: './menu.component.scss'
 })
 export class MenuComponent {
-
+  user:any ;
+  isLogin: boolean = false;
+  constructor() {
+    const localUser = localStorage.getItem('isLogin');
+    if(localUser != null) {
+      this.user = JSON.parse(localUser);
+      this.isLogin = true;
+    }
+    else {
+      this.isLogin = false;
+    }
+  }
 }

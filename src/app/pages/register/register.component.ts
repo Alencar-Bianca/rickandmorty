@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from '../components/header/header.component';
 import { MenuComponent } from '../components/menu/menu.component';
 import { FormComponent } from '../../shared/components/form/form.component';
+
 import { loginInterface } from '../../interfaces/login.interface';
 
 
@@ -17,7 +18,6 @@ import { loginInterface } from '../../interfaces/login.interface';
   styleUrl: './register.component.scss'
 })
 export class RegisterComponent {
-  signUpObj: loginInterface = {name: '', email: '', password: ''}
   constructor(private router: Router){}
 
   onRegister(signUpObj: loginInterface) {

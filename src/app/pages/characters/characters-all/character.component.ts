@@ -4,11 +4,12 @@ import { DOCUMENT } from '@angular/common';
 import { MenuComponent } from '../../components/menu/menu.component';
 import { HeaderComponent } from '../../components/header/header.component';
 import { CardComponent } from '../../../shared/components/card/card.component';
+import { SearchComponent } from '../../../shared/components/search/search.component';
 
 import { ApiService } from '../../../services/api.service';
 
 import { charactersInterface } from '../../../interfaces/characters.interface';
-import { SearchComponent } from '../../../shared/components/search/search.component';
+
 
 
 @Component({

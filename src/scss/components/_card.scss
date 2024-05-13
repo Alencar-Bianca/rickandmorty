@@ -2,7 +2,7 @@
   justify-content: center;
 }
 
-a {
+a, .content-box {
   width: 100%;
   max-width: 650px;
 
@@ -71,14 +71,14 @@ a {
     align-items: center;
   }
 
-  a {
+  a, .content-box {
     width: 100%;
     max-width: 340px;
   }
 }
 
 @media (max-width: 360px)  {
-  a {
+  a, .content-box {
     overflow: hidden;
   }
 }

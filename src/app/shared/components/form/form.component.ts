@@ -26,10 +26,8 @@ export class FormComponent {
   onSubmit() {
 
     if (this.text == 'registrar') {
-
       this.register.emit(this.signUp);
     } else {
-      console.log(this.signUp,'oi')
       this.login.emit(this.signUp);
     }
   }

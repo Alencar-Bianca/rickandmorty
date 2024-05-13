@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -8,7 +8,7 @@ import { RouterLink } from '@angular/router';
   templateUrl: './card.component.html',
   styleUrl: './card.component.scss'
 })
-export class CardComponent implements OnInit{
+export class CardComponent {
   @Input() link: string = "";
   @Input() image: string = "";
   @Input() title: string = "";
@@ -19,5 +19,5 @@ export class CardComponent implements OnInit{
   @Input() epP: string = "";
   @Input() epU: string = "";
 
-  ngOnInit(): void{}
+
 }

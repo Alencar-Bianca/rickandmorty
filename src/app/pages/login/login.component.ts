@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { HeaderComponent } from '../components/header/header.component';
 import { MenuComponent } from '../components/menu/menu.component';
 import { FormComponent } from '../../shared/components/form/form.component';
+
 import { loginInterface } from '../../interfaces/login.interface';
 
 
@@ -15,7 +16,6 @@ import { loginInterface } from '../../interfaces/login.interface';
   styleUrl: './login.component.scss'
 })
 export class LoginComponent {
-  login: loginInterface = {email: '', password: ''} ;
   constructor(private router: Router){}
 
   onLogin(login: loginInterface) {
