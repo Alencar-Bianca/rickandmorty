@@ -1,10 +1,14 @@
+<!-- form.component.html -->
 <div class="login-container">
   <div class="login-form flex">
     <h2>{{text}} - Rick and Morty</h2>
     <div class="center"><img src="../../../../assets/rickandmortydance.png" alt=""></div>
-    <form action="#">
-      <input type="email" name="email" placeholder="Digite seu email">
-      <input type="password" name="password" placeholder="Digite sua senha">
+    <form (ngSubmit)="onSubmit()">
+      @if (text == 'registrar') {
+        <input type="text" name="name" placeholder="Digite seu nome" [(ngModel)]="signUp.name">
+      }
+      <input type="email" name="email" placeholder="Digite seu email" [(ngModel)]="signUp.email">
+      <input type="password" name="password" placeholder="Digite sua senha" [(ngModel)]="signUp.password">
       <div class="center"><input type="submit" value="{{submit}}"></div>
     </form>
     <a class="center link-form" href="{{link}}">{{mens}}</a>

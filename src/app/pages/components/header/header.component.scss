@@ -15,6 +15,23 @@
     width: 50px;
   }
 
+  .btn-primary {
+    background-color: var(--background-second);
+    color: var(--text-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: var(--title);
+    font-size: 10px;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+  }
+
+  .btn-primary:hover {
+    background-color: var(--background-third);
+  }
+
   @media (max-width: 830px)  {
     header{
       width: 100% ;

@@ -1,3 +1,4 @@
-<app-header/>
-<app-menu/>
-<app-form text="{{'registrar'}}" submit="{{'Cadastrar'}}" link="/login" mens="Possui conta? clique aqui"/>
+<app-header></app-header>
+<app-menu></app-menu>
+<app-form [text]="'registrar'" [submit]="'Cadastrar'" [link]="'/login'" [mens]="'Possui conta? clique aqui'" (register)="onRegister($event)"
+></app-form>
