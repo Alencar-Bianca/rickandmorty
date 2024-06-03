@@ -17,10 +17,9 @@ export class PerfilComponent {
     const localUser = localStorage.getItem('isLogin');
     if(localUser != null) {
       this.user = JSON.parse(localUser);
-
     }
     else {
-
+      alert('Usuário não encontrado')
     }
   }
 }
