@@ -1,3 +1,7 @@
+# Rick and Morty Api
+
+![Design preview for the Social links profile coding challenge](./template.png)
+
 ## 📦 Instalação
 
 Executar para clonar o projeto:
